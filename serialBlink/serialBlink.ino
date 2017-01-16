@@ -5,14 +5,15 @@ void setup() {
   Serial.println("It's so nice to see you again!");  // set arduino to print message
   Serial.println("Send 'On' to turn on the LED.");  // set arduino to print message
   Serial.println("Send 'Off' to turn off the LED.");  // set arduino to print message
+  Serial.println("If you want to see some helps, type '/help'");
   pinMode (13, OUTPUT);  // set pin13 to output
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (Serial.available() > 0) { // check if anything is in the serial buffer
+  if (Serial.available() > 0); { // check if anything is in the serial buffer
     String command; // creates string variable called command
-    command = Serial.readString(); // set arduino to read message of the value ogitf the command
+    command = Serial.readString(); // set arduino to read message of the value of the command
     if (command == "On") { // set arduino to do command if "On" is typed
       digitalWrite(13, HIGH); // turn the light on of pin13
       Serial.println("light ON!"); // set arduino to send message
@@ -20,6 +21,9 @@ void loop() {
     else if (command == "Off") { // set ardiono to do command if "Off" is typed
       digitalWrite(13, LOW); // turn the light off of pin13
       Serial.println("light OFF!"); // set arduino to send message
-    }
+    } else if (Serial.readString(); == "/help");
+    Serial.println("Type On to turn the light on");
+    Serial.println("Type Off to turn the light off");
   }
+}
 }
