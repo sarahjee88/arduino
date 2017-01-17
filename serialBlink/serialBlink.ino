@@ -21,9 +21,9 @@ void loop() {
     else if (command == "Off") { // set ardiono to do command if "Off" is typed
       digitalWrite(13, LOW); // turn the light off of pin13
       Serial.println("light OFF!"); // set arduino to send message
-    } else if (Serial.readString(); == "/help");
-    Serial.println("Type On to turn the light on");
-    Serial.println("Type Off to turn the light off");
+      else if (Serial.readString(); == "/help");
+      Serial.println("Type On to turn the light on");
+      Serial.println("Type Off to turn the light off");
+    }
   }
-}
 }
